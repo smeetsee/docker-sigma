@@ -1,4 +1,4 @@
-FROM python:3.14-alpine
+FROM python:3.15-alpine
 MAINTAINER Xander Smeets <xander@smeets.ee>
 ARG TARGETARCH
 RUN if [ "$TARGETARCH" = "386" ] || [ "$TARGETARCH" = "arm" ] || [ "$TARGETARCH" = "ppc64le" ] || [ "$TARGETARCH" = "s390x" ]; then apk add --no-cache --virtual .build-deps build-base; fi \
